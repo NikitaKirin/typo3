@@ -118,7 +118,7 @@ class SiteWriter
             // load the processed configuration to diff changed values,
             // but don't process placeholders, because all properties that
             // were modified via GUI are unprocessed values as well
-            $processed = $this->yamlFileLoader->load(GeneralUtility::fixWindowsFilePath($fileName), YamlFileLoader::PROCESS_IMPORTS);
+            $processed = $this->yamlFileLoader->load(GeneralUtility::fixWindowsFilePath($fileName));
             // find properties that were modified via GUI
             $newModified = array_replace_recursive(
                 self::findRemoved($processed, $configuration),
